@@ -5,3 +5,18 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+User.create!([{username: 'Jimmothy'}, {username:"Ozzy"}, {username:"Matthew"}, {username:"Andy"}])
+
+Artwork.create!(
+    [{title: "Sunshine", image_url: "sunshine.web", artist_id: 1},
+    {title: "Cloudy" , image_url: "cloudy.web", artist_id: 2},
+    {title: "Snowy", image_url: "snowy.web", artist_id: 3},
+    {title: "Apocolyptic", image_url: "apocolypse.web", artist_id: 4}])
+
+ArtworkShare.create!([
+  {artwork_id: 1, viewer_id:4 },
+  {artwork_id: 2, viewer_id:3 },
+  {artwork_id: 3, viewer_id:2 },
+  {artwork_id: 4, viewer_id:1 }
+])
