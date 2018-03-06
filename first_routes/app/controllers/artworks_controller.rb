@@ -4,6 +4,7 @@ class ArtworksController < ApplicationController
     .joins(:shares)
     .where("artist_id = ? or artwork_shares.viewer_id = ?", params[:user_id], params[:user_id])
   end
+  or artwork_shares.viewer_id = ?", params[:user_id],
 
   def create
     artwork = Artwork.new(artwork_params)
